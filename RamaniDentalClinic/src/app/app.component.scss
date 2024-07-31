@@ -5,27 +5,6 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background-color: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
 
 section {
     padding: 20px;
@@ -73,14 +52,4 @@ section {
 
 #contact-form button:hover {
     background-color: #45a049;
-}
-
-footer {
-    background-color: #35424a;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
 }
