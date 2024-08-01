@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  toggleMenu() {
+    var x = document.getElementById("myTopnav") as HTMLElement;
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
 
 }
