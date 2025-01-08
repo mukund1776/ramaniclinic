@@ -16,22 +16,29 @@
     
     & > div {
       text-align: start;
+      p {
+        font-size: 18px;
+      }
     }
   }
 
   .dental-treatments {
+    color: purple;
     grid-area: dental;
   }
 
   .skin-treatments {
+    color: darkgreen;
     grid-area: skin;
   }
 
   .personalized-diet {
+    color: blue;
     grid-area: diet;
   }
 
-  .hair-treatmentws {
+  .hair-treatments {
+    color: purple;
     grid-area: hair;
   }
 }
@@ -53,5 +60,17 @@
       "skin"
       "diet"
       "hair";
+
+    .treatments {
+      margin-left: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    .treatments {
+      margin-left: 10%;
+    }
   }
 }
