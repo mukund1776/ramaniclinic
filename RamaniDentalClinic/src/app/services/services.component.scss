@@ -35,3 +35,23 @@
     grid-area: hair;
   }
 }
+
+@media screen and (max-width: 1300px) {
+  .grid {
+    grid-template-areas:
+      "dental skin"
+      "dental skin"
+      "diet hair"
+      "diet hair"
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .grid {
+    grid-template-areas:
+      "dental"
+      "skin"
+      "diet"
+      "hair";
+  }
+}
