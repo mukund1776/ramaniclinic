@@ -1,0 +1,37 @@
+.grid {
+  display: grid;
+  grid-template-areas:
+    "dental skin diet"
+    "dental skin hair";
+  margin-top: 50px;
+  
+  .treatments {
+    margin-left: 100px;
+    text-align: center;
+
+    & > p:first-child {
+      font-size: 30px;
+      text-align: start;
+    }
+    
+    & > div {
+      text-align: start;
+    }
+  }
+
+  .dental-treatments {
+    grid-area: dental;
+  }
+
+  .skin-treatments {
+    grid-area: skin;
+  }
+
+  .personalized-diet {
+    grid-area: diet;
+  }
+
+  .hair-treatmentws {
+    grid-area: hair;
+  }
+}

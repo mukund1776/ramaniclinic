@@ -17,13 +17,18 @@ header {
 
   a {
     font-size: 30px;
+    text-align: center;
     text-decoration: none;
 
-    img {
+    div {
       display: inline-block;
-      height: 30px;
-      position: relative;
-      top: 5px;
+
+      img {
+        display: inline-block;
+        height: 30px;
+        position: relative;
+        top: 5px;
+      }
     }
   }
 }
