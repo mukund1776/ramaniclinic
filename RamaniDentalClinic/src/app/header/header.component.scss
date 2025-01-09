@@ -16,9 +16,17 @@ header {
   }
 
   a {
+    background: lightblue;
+    border-radius: 10px;
+    border: 1px solid;
     font-size: 30px;
+    padding: 0 2px;
     text-align: center;
     text-decoration: none;
+
+    &:hover {
+      background-color: #83c5db;
+    }
 
     div {
       display: inline-block;
