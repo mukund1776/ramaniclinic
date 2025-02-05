@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  isAnandClinic = window.location.href.includes('vaishnavismilenest');
+  isAnandClinic = window.location.href.includes('anandsmileandglow');
 }
