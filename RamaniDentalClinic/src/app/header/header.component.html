@@ -1,4 +1,5 @@
 <header>
-  <img src="logo.jpeg" alt="Anand Smile and Glow">
+  <img *ngIf="isAnandClinic" src="anand-logo.jpeg" alt="Anand Smile and Glow">
+  <img *ngIf="!isAnandClinic" src="vaishnavi-logo.png" alt="Vaishnavi Smile Nest" [style.marginBottom]="'10px'">
   <a href="tel:+919652074751">To book an appointment <div>Call <img src="icons/phone.svg"> 9652074751</div></a>
 </header>
