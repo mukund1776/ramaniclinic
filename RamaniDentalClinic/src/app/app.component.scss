@@ -13,7 +13,7 @@ iframe, h1 {
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   iframe, h1 {
     margin-left: 5%;
     width: 90%;
