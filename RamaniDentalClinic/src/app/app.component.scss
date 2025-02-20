@@ -10,6 +10,12 @@ h1 {
 }
 
 iframe, h1 {
-  margin-left: 5%;
-  width: 90%;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  iframe, h1 {
+    margin-left: 5%;
+    width: 90%;
+  }
 }
