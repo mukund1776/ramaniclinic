@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './services.component.scss'
 })
 export class ServicesComponent {
-
+  hideMoreTreatments = true;
 }

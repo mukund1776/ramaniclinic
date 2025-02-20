@@ -22,6 +22,10 @@
     }
   }
 
+  .see-more-less {
+    display: none;
+  }
+
   .dental-treatments {
     color: purple;
     grid-area: dental;
@@ -70,7 +74,29 @@
 @media screen and (max-width: 600px) {
   .grid {
     .treatments {
-      margin-left: 10%;
+      margin-left: 5%;
+    }
+
+    .hideMoreTreatments {
+      display: none;
+    }
+
+    .see-more-less {
+      background: lightblue;
+      border: 1px solid;
+      border-radius: 5px;
+      color: darkblue;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 20px;
+      margin: 20px 0 0 5%;
+      padding: 2px;
+      text-align: start;
+      width: fit-content;
+
+      &:hover {
+        background-color: #83c5db;
+      }
     }
   }
 }

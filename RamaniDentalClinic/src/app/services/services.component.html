@@ -10,17 +10,17 @@
       <p>Wisdom Tooth Removal</p>
       <p>Dentures</p>
       <p>Teeth Whitening</p>
-      <p>Braces - Teeth Alignment</p>
-      <p>Children’s Dentistry</p>
-      <p>Cosmetic Dentistry</p>
-      <p>Gum Treatment</p>
-      <p>Implants</p>
-      <p>Teeth Removal</p>
-      <p>Smile Designing</p>
+      <p [class.hideMoreTreatments]="hideMoreTreatments">Braces - Teeth Alignment</p>
+      <p [class.hideMoreTreatments]="hideMoreTreatments">Children’s Dentistry</p>
+      <p [class.hideMoreTreatments]="hideMoreTreatments">Cosmetic Dentistry</p>
+      <p [class.hideMoreTreatments]="hideMoreTreatments">Gum Treatment</p>
+      <p [class.hideMoreTreatments]="hideMoreTreatments">Implants</p>
+      <p [class.hideMoreTreatments]="hideMoreTreatments">Teeth Removal</p>
+      <p [class.hideMoreTreatments]="hideMoreTreatments">Smile Designing</p>
     </div>
   </div>
 
-  <div class="treatments skin-treatments">
+  <div class="treatments skin-treatments" [class.hideMoreTreatments]="hideMoreTreatments">
     <p>SKIN</p>
     <div>
       <p>ACNE Treatment</p>
@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  <div class="treatments personalized-diet">
+  <div class="treatments personalized-diet" [class.hideMoreTreatments]="hideMoreTreatments">
     <p>PERSONALISED DIET</p>
     <div>
       <p>CONSULTATION BY OUR SPECIALIST FOR</p>
@@ -50,12 +50,20 @@
     </div>
   </div>
 
-  <div class="treatments hair-treatments">
+  <div class="treatments hair-treatments" [class.hideMoreTreatments]="hideMoreTreatments">
     <p>HAIR</p>
     <div>
       <p>PRP Hair</p>
       <p>Anti Hairfall Treatment</p>
       <p>Anti Dandruff Treatment</p>
     </div>
+  </div>
+  <div class="treatments see-more-less"
+       (click)="hideMoreTreatments = !hideMoreTreatments">
+    @if (hideMoreTreatments) {
+      See more treatments...
+    } @else {
+      Hide more treatments...
+    }
   </div>
 </div>
