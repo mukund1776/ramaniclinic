@@ -88,3 +88,15 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .grid {
+    .treatments {
+      margin-left: 10px;
+    }
+
+    .see-more-less {
+      margin-left: 10px;
+    }
+  }
+}

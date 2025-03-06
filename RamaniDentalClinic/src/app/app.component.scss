@@ -13,3 +13,10 @@ iframe, h1 {
   margin-left: 50px;
   width: calc(100% - 100px);
 }
+
+@media screen and (max-width: 500px) {
+  iframe, h1 {
+    margin-left: 10px;
+    width: calc(100% - 20px);
+  }
+}
