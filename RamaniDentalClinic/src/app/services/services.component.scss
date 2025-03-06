@@ -5,7 +5,7 @@
     "dental skin hair";
   
   .treatments {
-    margin: 25px 0 0 100px;
+    margin: 25px 0 0 50px;
     text-align: center;
 
     & > p:first-child {
@@ -65,18 +65,6 @@
       "diet"
       "hair";
 
-    .treatments {
-      margin-left: 150px;
-    }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .grid {
-    .treatments {
-      margin-left: 5%;
-    }
-
     .hideMoreTreatments {
       display: none;
     }
@@ -89,7 +77,7 @@
       cursor: pointer;
       display: inline-block;
       font-size: 20px;
-      margin: 20px 0 0 5%;
+      margin: 20px 0 0 50px;
       padding: 2px;
       text-align: start;
       width: fit-content;
