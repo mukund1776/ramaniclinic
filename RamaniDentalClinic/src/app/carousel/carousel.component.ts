@@ -1,41 +1,71 @@
-import { Component } from '@angular/core';
-
-const IMAGE_URLS = [
-  '/clinic-pics/outside-board.jpg',
-  '/clinic-pics/chair.jpg',
-  '/clinic-pics/certificate-1.jpg',
-  '/clinic-pics/certificate-2.jpg',
-  '/clinic-pics/certificate-3.jpg',
-  '/clinic-pics/certificate-4.jpg',
-  '/clinic-pics/glass-logo.jpg',
-  '/clinic-pics/brush-your-teeth.jpg',
-];
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'ac-carousel',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss'
+  styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent {
-  imageIndex = 0;
-  IMAGE_URLS = IMAGE_URLS;
+export class CarouselComponent implements OnInit, OnDestroy {
+  currentIndex: number = 0;
+  shouldAnimate: boolean = false;
+  private autoSlideInterval: any;
 
-  goToPreviousImage() {
-    if (this.imageIndex === 0) {
-      this.imageIndex = IMAGE_URLS.length - 1;
-    } else {
-      this.imageIndex--;
+  images = [
+    { url: '/clinic-pics/outside-board.jpg', alt: 'Image 1' },
+    { url: '/clinic-pics/chair.jpg', alt: 'Image 2' },
+    { url: '/clinic-pics/certificate-1.jpg', alt: 'Image 3' },
+    { url: '/clinic-pics/certificate-2.jpg', alt: 'Image 4' },
+    { url: '/clinic-pics/certificate-3.jpg', alt: 'Image 5' },
+    { url: '/clinic-pics/certificate-4.jpg', alt: 'Image 6' },
+    { url: '/clinic-pics/glass-logo.jpg', alt: 'Image 7' },
+    { url: '/clinic-pics/brush-your-teeth.jpg', alt: 'Image 8' },
+  ];
+
+  constructor() { }
+
+  ngOnInit(): void {
+    this.startAutoSlide();
+  }
+
+  ngOnDestroy(): void {
+    this.stopAutoSlide();
+  }
+
+  startAutoSlide(): void {
+    this.autoSlideInterval = setInterval(() => {
+      this.nextSlide();
+    }, 5000);
+  }
+
+  stopAutoSlide(): void {
+    if (this.autoSlideInterval) {
+      clearInterval(this.autoSlideInterval);
     }
   }
 
-  goToNextImage() {
-    if (this.imageIndex === IMAGE_URLS.length - 1) {
-      this.imageIndex = 0;
-    } else {
-      this.imageIndex++;
-    }
-    console.log(this.imageIndex);
+  nextSlide(): void {
+    this.shouldAnimate = true;
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    this.resetAutoSlide();
+  }
+
+  previousSlide(): void {
+    this.shouldAnimate = true;
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+    this.resetAutoSlide();
+  }
+
+  goToSlide(index: number): void {
+    this.shouldAnimate = true;
+    this.currentIndex = index;
+    this.resetAutoSlide();
+  }
+
+  private resetAutoSlide(): void {
+    this.stopAutoSlide();
+    this.startAutoSlide();
   }
 }

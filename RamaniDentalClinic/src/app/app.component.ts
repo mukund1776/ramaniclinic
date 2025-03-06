@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
-import { FooterComponent } from "./footer/footer.component";
 import { CarouselComponent } from './carousel/carousel.component';
 import { ServicesComponent } from "./services/services.component";
 
 @Component({
   selector: 'ac-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, CarouselComponent, ServicesComponent],
+  imports: [HeaderComponent, CarouselComponent, ServicesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
