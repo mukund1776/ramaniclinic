@@ -1,13 +1,26 @@
 .carousel-container {
   position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 50px auto 0 auto;
+  width: calc(100% - 100px);
+  max-width: 900px;
+  margin: 0 auto 50px auto;
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+h1 {
+  color: green;
+  margin: auto;
+  margin-top: 50px;
+  width: calc(100% - 100px);
+}
+
+@media screen and (max-width: 500px) {
+  .carousel-container, h1 {
+    width: calc(100% - 20px);
+  }
 }
 
 .carousel-slides {
